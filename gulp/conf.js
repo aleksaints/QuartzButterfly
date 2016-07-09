@@ -24,7 +24,11 @@ exports.paths = {
  *  to inject css preprocessor deps and js files in karma
  */
 exports.wiredep = {
-  exclude: [/\/bootstrap\.js$/, /\/bootstrap\.css/],
+  exclude: [
+    /\/admin-lte\/build\/less\/AdminLTE.less/,
+    /\/bootstrap\.js$/,
+    /\/bootstrap\.css/
+  ],
   directory: 'bower_components'
 };
 
