@@ -26,6 +26,7 @@ exports.paths = {
 exports.wiredep = {
   exclude: [
     /\/admin-lte\/build\/less\/AdminLTE.less/,
+    /\/admin-lte\/dist/,
     /\/bootstrap\.js$/,
     /\/bootstrap\.css/
   ],

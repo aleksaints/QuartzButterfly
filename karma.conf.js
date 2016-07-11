@@ -61,6 +61,15 @@ module.exports = function(config) {
       whitelist: [path.join(conf.paths.src, '/**/!(*.html|*.spec|*.mock).js')]
     },
 
+    specReporter: {
+      maxLogLines: 5,
+      suppressErrorSummary: false,
+      suppressFailed: false,
+      suppressPassed: false,
+      suppressSkipped: true,
+      showSpecTiming: true
+    },
+
     browsers : ['PhantomJS'],
 
     plugins : [
@@ -69,7 +78,8 @@ module.exports = function(config) {
       'karma-phantomjs-shim',
       'karma-coverage',
       'karma-jasmine',
-      'karma-ng-html2js-preprocessor'
+      'karma-ng-html2js-preprocessor',
+      'karma-spec-reporter'
     ],
 
     coverageReporter: {
@@ -77,7 +87,7 @@ module.exports = function(config) {
       dir : 'coverage/'
     },
 
-    reporters: ['progress'],
+    reporters: ['spec'], // This array is overriden on gulp/unit-test.js
 
     proxies: {
       '/assets/': path.join('/base/', conf.paths.src, '/assets/')
