@@ -46,10 +46,24 @@ $ docker-compose up # To stop it just use Ctrl+C
 
 ### Dev dependencies
 
-- Node v4.4+
-	- bower
-	- gulp
+- Node.js v4.4+
+  - npm 3
+  - bower
+  - gulp
   - karma
+
+If you don't want to install those dependencies locally, you can use Vagrant instead
+
+```
+$ cd <project directory>
+$ vagrant up
+```
+
+Therefor you'll need to install to make it work
+
+- Virtualbox 5+
+- Vagrant 1.8.1+
+  - vagrant-vbguest 0.12.0+ (vagrant plug-in)
 
 ### Gulp Tasks
 
@@ -64,5 +78,6 @@ without live reload
 - `$ gulp protractor` to launch your e2e tests with Protractor
 - `$ gulp protractor:dist` to launch your e2e tests with Protractor on the dist files
 
-**Note**: For both `server` task you can check the application at 
-[localhost:3000](http://localhost:3000)
+**Note**: For both `server` task you can check the application at
+[localhost:3000](http://localhost:3000) or [192.168.99.99:3000](http://192.168.99.99:3000)
+if you're using vagrant.
